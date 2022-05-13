@@ -31,7 +31,23 @@ func findprimes(number int) bool {
 		return false
 	}
 }
+func inputANum() {
+	val := 0
+	for {
+		fmt.Print("Enter number: ")
+		fmt.Scanf("%d", &val)
 
+		if val == 0 {
+			fmt.Println("0 is neither negative nor positive")
+		} else if val > 0 {
+			fmt.Println("You entered:", val)
+		} else {
+			panic("输入了一个负数  ！ Error")
+		}
+
+	}
+
+}
 func getPrime() {
 	fmt.Println("Prime numbers less than 20:")
 
@@ -42,5 +58,5 @@ func getPrime() {
 	}
 }
 func main() {
-	getPrime()
+	inputANum()
 }
