@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
+	"learnGo/util"
 )
-
-import "learnGo/src/util"
 
 func main() {
 	fmt.Println("我的第一个 main程序")
