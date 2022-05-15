@@ -32,17 +32,23 @@ func process(p people) {
 
 	//p 是否可以转成 chinese
 
-	ch, ok := p.(chinese)
-	if ok {
-		ch.say()
-		ch.niu()
+	switch p.(type) {
+	case chinese:
+		p.(chinese).niu()
+	case american:
+		p.(american).talk()
 	}
 
-	ch1, ok1 := p.(american)
-	if ok1 {
-		ch1.say()
-		ch1.talk()
-	}
+	//if ch, ok := p.(chinese); ok {
+	//	ch.say()
+	//	ch.niu()
+	//}
+	//
+	//ch1, ok1 := p.(american)
+	//if ok1 {
+	//	ch1.say()
+	//	ch1.talk()
+	//}
 }
 
 func main() {
