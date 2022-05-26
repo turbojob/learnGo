@@ -14,6 +14,7 @@ func main() {
 			fmt.Println(n)
 		}(i)
 	}
+
 	count.Wait()
 
 }

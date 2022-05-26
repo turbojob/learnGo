@@ -16,6 +16,7 @@ func main() {
 	go func() {
 		time.Sleep(time.Second * 5)
 		pipe1 <- 10
+
 	}()
 	go func() {
 		time.Sleep(time.Second * 12)
